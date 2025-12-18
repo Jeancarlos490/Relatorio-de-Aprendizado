@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    Digite a sua idade
+    <input type="number" id="idade">
+    <div>
+        <!--Checkbox para Seleção de Homem ou Mulher-->
+        <input type="radio" id="Masc" name="sexo" value="Me" />
+        <label id="Masc">Masculino</label>
+        <input type="radio" id="Fem" name="sexo" value="Fe" />
+        <label id="Fem">Feminino</label>
+    </div>
+    <button onclick="Verificar()">Verificar</button>
+    <p>Você é:</p>
+    <div id="resultado">Digite a sua idade e selecione o seu sexo</div>
+    <script>
+
+        function Verificar() {
+
+            var sexo = document.querySelector('input[name="sexo"]:checked')?.value;
+            var idade = Number(document.getElementById("idade").value)
+            var res = document.getElementById("resultado")
+
+            //Verifica se todos os campos foram preenchidos
+            if (!sexo || isNaN(idade)){
+                alert("Preencha todos os campos solicitados!")
+                return;
+            }
+            
+            //Verifica o sexo selecionado no Checkbox
+            if (sexo === "Me") {
+                sexo = "Masculino"
+            } else {
+                sexo = "Feminino"
+            }
+
+
+            //Transforma a idade selecionada na resposta correspondente
+            function verificaridade() {
+                switch (true) {
+                    case (idade >= 2 && idade <= 11):
+                        res.innerHTML = `${sexo} Criança`
+                        break;
+                    case (idade >= 12 && idade <= 17):
+                        res.innerHTML = `${sexo} Adolescente`
+                        break;
+                    case (idade >= 18 && idade <= 50):
+                        res.innerHTML = `${sexo} Adulto`
+                        break;
+                    case (idade >= 51 && idade <= 99):
+                        res.innerHTML = `${sexo} Idoso`
+                        break;
+                    default:
+                        res.innerHTML = "verifique todos os campos"
+                }
+            }
+            verificaridade();
+        }
+    </script>
+</body>
+
+</html>
