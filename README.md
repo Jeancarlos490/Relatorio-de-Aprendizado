@@ -11,7 +11,7 @@ contínuo e consolidação de fundamentos.
 ## Objetivo
 
 - Registrar a evolução gradual dos estudos
-- Praticar conceitos fundamentais de programação e d
+- Praticar conceitos fundamentais de programação
 - Aplicar lógica em exercícios e desafios autorais
 - Manter um histórico real e verificável de aprendizado
 
