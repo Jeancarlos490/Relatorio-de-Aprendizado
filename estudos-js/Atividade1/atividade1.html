@@ -26,9 +26,9 @@
 
         function Verificar() {
 
-            var sexo = document.querySelector('input[name="sexo"]:checked')?.value;
-            var idade = Number(document.getElementById("idade").value)
-            var res = document.getElementById("resultado")
+            let sexo = document.querySelector('input[name="sexo"]:checked')?.value;
+            let idade = Number(document.getElementById("idade").value)
+            const res = document.getElementById("resultado")
 
             //Verifica se todos os campos foram preenchidos
             if (!sexo || isNaN(idade)){
