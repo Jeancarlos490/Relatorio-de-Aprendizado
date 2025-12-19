@@ -1,0 +1,10 @@
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 75%;
+}
