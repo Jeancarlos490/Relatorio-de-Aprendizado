@@ -13,22 +13,11 @@ function AtualizarLista() {
         listavalor.push(valor);
         const arraynome = listanome.length - 1;
         let arrayvalor = Number(listavalor.length - 1);
-        attlist.innerText = `${listanome[arraynome]}: ${listavalor[arrayvalor]}`;
+        attlist.innerText = `${listanome[arraynome]}: R$${listavalor[arrayvalor]}`;
         res.appendChild(attlist);
         TotalValor()
     } else {
         alert("preencha todos os campos")
-    }
-
-    function TotalValor() {
-        let primeirovalor = listavalor.at(-2)
-        let ultimovalor = listavalor.at(-1)
-        let valortotal = primeirovalor += ultimovalor
-        const resultado = document.getElementById("Valortotal")
-
-        if(listavalor.length <= 1){
-            resultado.innerHTML = ultimovalor
-        }
     }
 }
 
@@ -40,9 +29,18 @@ function Removerultimo() {
         res.lastElementChild.remove();
         listanome.pop();
         listavalor.pop();
-        let valoresgerais = listavalor.at(-0) - listavalor.at(-1)
-        valortot.innerText = valoresgerais;
+        let arrayvalor = Number(listavalor.length - 1);
+        valortot.innerText = arrayvalor
+        TotalValor()
     } else {
         alert("lista vazia")
     }
+}
+
+function TotalValor() {
+    let valortot = document.getElementById("Valortotal");
+    let arraysoma = 0;
+    for (let valores of listavalor)
+        arraysoma += valores;
+    valortot.innerText = `R$${arraysoma}`
 }
