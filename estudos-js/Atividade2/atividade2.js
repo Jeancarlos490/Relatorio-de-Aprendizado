@@ -13,7 +13,7 @@ function AtualizarLista() {
         listavalor.push(valor);
         const arraynome = listanome.length - 1;
         let arrayvalor = Number(listavalor.length - 1);
-        attlist.innerText = `${listanome[arraynome]}: R$${listavalor[arrayvalor]}`;
+        attlist.innerText = `Gasto: ${listanome[arraynome]}\n Valor: R$${listavalor[arrayvalor]}`;
         res.appendChild(attlist);
         TotalValor()
     } else {

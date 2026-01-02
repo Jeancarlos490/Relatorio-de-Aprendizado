@@ -11,17 +11,25 @@
 <body>
     <div class="container">
         <label for="gasto-descricao">Descrição do gasto</label>
-        <input type="text" id="gasto-descricao" class="input-geral">
+
+        <input type="text" id="gasto-descricao" class="input-geral" maxlength="25">
+        
         <label for="gasto-valor">Valor do gasto</label>
-        <input type="text" id="gasto-valor" class="input-geral">
+        
+        <input type="text" id="gasto-valor" class="input-geral" maxlength="20">
+        
+        <p id="Valortotal">Nenhum valor</p>
+        
+        <div class="botão">
+            <button onclick="AtualizarLista()">Adicionar</button>
+            <button onclick="Removerultimo()">Remover</button>
+        </div>
     </div>
 
-    <p id="Valortotal">Nenhum valor</p>
-    
-    <button onclick="AtualizarLista()">Adicionar</button>
-    <button onclick="Removerultimo()">Remover</button>
-    <ul id="resultado">
-    </ul>
+    <div class="listbox">
+        <ul id="resultado">
+        </ul>
+    </div>
 </body>
 <script src="atividade2.js"></script>
 
